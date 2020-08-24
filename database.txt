@@ -1,0 +1,97 @@
+
+CREATE TABLE Persons
+ (
+ ID int NOT NULL AUTO_INCREMENT,
+ LastName varchar(255) NOT NULL,
+ FirstName varchar(255),
+ Address varchar(255),
+ City varchar(255),
+ PRIMARY KEY (ID)
+ )
+
+
+
+
+
+table:student
+Studentid,firstname,lastname,fathername,address,gender,dateofbirth,dateofjoin,course,phoneno,email,caste,religion,nation,image
+
+
+CREATE TABLE student
+ (
+ studentid int NOT NULL AUTO_INCREMENT,
+ firstname varchar(255),
+ lastname varchar(255) NOT NULL,	
+ fathername varchar(255),
+ address varchar(255),
+ gender varchar(255),
+ dateofbirth varchar(50),
+ dateofjoin varchar(50),
+ course varchar(50),
+ phoneno varchar(20),
+ email varchar(100),
+ caste varchar(50),
+ religion varchar(40),	
+ nation varchar(50), 	
+ PRIMARY KEY (studentid)
+ )
+
+table : staff
+employeeid,firstname,lastname,fathername,address,gender,dateofbirth,dateofjoin,phoneno,email,qualification,experience,caste,religion,nation,loginid
+
+
+
+
+CREATE TABLE staff
+ (
+ employeeid int NOT NULL AUTO_INCREMENT,
+ firstname varchar(255),
+ lastname varchar(255) NOT NULL,	
+ fathername varchar(255),
+ address varchar(255),
+ gender varchar(255),
+ dateofbirth varchar(50),
+ dateofjoin varchar(50),
+ phoneno varchar(20),
+ email varchar(100),
+ qualification varchar(50),
+ experience varchar(100),
+ caste varchar(50),
+ religion varchar(40),	
+ nation varchar(50),
+ loginid varchar(50) NOT NULL UNIQUE, 	
+ PRIMARY KEY (employeeid)
+ )
+
+
+
+
+
+ALTER TABLE table_name
+ ADD column_name datatype
+
+ALTER TABLE users ADD (name varchar(50),phone varchar(20)); 
+
+table:result
+CREATE TABLE result 
+(studentid int unique,
+cint int,
+ cex int,
+ cdint int,
+ cdex int,
+ seint int,
+ dbint int,
+ javaint int,
+ javaex int
+ );
+
+
+
+    ALTER TABLE users
+ADD COLUMN `count` SMALLINT(6) NOT NULL AFTER `lastname`,
+ADD COLUMN `log` VARCHAR(12) NOT NULL AFTER `count`,
+ADD COLUMN `status` INT(10) UNSIGNED NOT NULL AFTER `log`;
+
+
+ALTER TABLE result ADD COLUMN `seex` int  AFTER `seint`;
+ADD COLUMN `dbex` int AFTER  `dbint`;
